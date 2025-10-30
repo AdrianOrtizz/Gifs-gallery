@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useGifsStore } from "../../store/useGifsStore";
 
-import forceDownload from "../../helpers/forceDownload";
+import GIF from "../Gif/Gif";
 
 const RandomGif = () => {
   const { randomGif, GIFs } = useGifsStore();
@@ -17,11 +17,7 @@ const RandomGif = () => {
       <h2 className="text-2xl my-2">GIF random:</h2>
       {GIFs.length !== 0 && (
         <article>
-          <img
-            onClick={() => forceDownload(GIFs[0].images.original.url)}
-            src={GIFs[0].images.original.url}
-            alt={GIFs[0].title}
-          />
+          <GIF url={GIFs[0].images.original.url} alt={GIFs[0].title} />
         </article>
       )}
     </section>
