@@ -1,6 +1,6 @@
 import forceDownload from "../../helpers/forceDownload";
 
-const DownloadIco = ({ url }: { url: string }) => {
+const DownloadIco = ({ url, name }: { url: string; name: string }) => {
   return (
     <div className="bg-gray-600 h-8 w-8 m-1 rounded absolute cursor-pointer">
       <svg
@@ -9,7 +9,7 @@ const DownloadIco = ({ url }: { url: string }) => {
         viewBox="0 0 15 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        onClick={() => forceDownload(url)}
+        onClick={() => forceDownload(url, name)}
       >
         <path
           fillRule="evenodd"

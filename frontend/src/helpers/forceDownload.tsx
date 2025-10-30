@@ -1,4 +1,4 @@
-const forceDownload = async (GifUrl: string) => {
+const forceDownload = async (GifUrl: string, name: string) => {
   const response = await fetch(GifUrl);
   const blob = await response.blob();
 
@@ -6,7 +6,7 @@ const forceDownload = async (GifUrl: string) => {
 
   const link = document.createElement("a");
   link.href = blobUrl;
-  link.download = "image";
+  link.download = name;
 
   document.body.appendChild(link);
   link.click();

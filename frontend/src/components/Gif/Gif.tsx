@@ -14,7 +14,7 @@ const GIF = ({ url, alt }: { url: string; alt: string }) => {
 
   return (
     <article onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      {isHovered && <DownloadIco url={url} />}
+      {isHovered && <DownloadIco url={url} name={alt} />}
       <img className="object-cover w-full h-auto" src={url} alt={alt} />
     </article>
   );
