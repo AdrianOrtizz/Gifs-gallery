@@ -38,7 +38,7 @@ Además, cada GIF se puede **descargar fácilmente** con un solo clic.
 1. Clonar el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/gifzz.git
+   git clone https://github.com/AdrianOrtizz/gifzz.git
 
    ```
 
